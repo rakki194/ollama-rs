@@ -3,14 +3,13 @@ use std::sync::{Arc, Mutex};
 use tokio_stream::StreamExt;
 
 use ollama_rs::{
+    Ollama,
     generation::{
-        chat::{request::ChatMessageRequest, ChatMessage},
+        chat::{ChatMessage, request::ChatMessageRequest},
         images::Image,
     },
-    Ollama,
 };
 
-#[allow(dead_code)]
 const PROMPT: &str = "Why is the sky blue?";
 
 #[tokio::test]

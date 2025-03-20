@@ -1,10 +1,10 @@
 use ollama_rs::{
+    Ollama,
     generation::{
         completion::request::GenerationRequest,
         parameters::{FormatType, JsonSchema, JsonStructure},
     },
     models::ModelOptions,
-    Ollama,
 };
 use serde::Deserialize;
 
@@ -14,7 +14,6 @@ enum Temperature {
     Cold,
 }
 
-#[allow(dead_code)]
 #[derive(JsonSchema, Deserialize, Debug)]
 struct Output {
     country: String,

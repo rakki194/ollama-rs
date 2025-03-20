@@ -1,11 +1,11 @@
 use ollama_rs::{
+    Ollama,
     coordinator::Coordinator,
     generation::{
         chat::ChatMessage,
         parameters::{FormatType, JsonSchema, JsonStructure},
     },
     models::ModelOptions,
-    Ollama,
 };
 
 use serde::Deserialize;
@@ -51,7 +51,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Sync + Send>> {
     Ok(())
 }
 
-#[allow(dead_code)]
 #[derive(JsonSchema, Deserialize, Debug)]
 struct Weather {
     city: String,
